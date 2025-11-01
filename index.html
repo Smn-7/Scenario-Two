@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Scenario Two</title>
+    
+    <!-- 1. Load Tailwind CSS AND the Typography plugin -->
+    <script src="https://cdn.tailwindcss.com/3.4.3?plugins=typography"></script>
+
+    <link rel="icon" type="image/svg+xml" href="Scenario-II.svg" />
+    
+    <!-- 2. Configure Tailwind for Dark Mode AND Typography (Corrected) -->
+    <script>
+      tailwind.config = {
+        darkMode: "class", // This enables 'dark:' classes
+        theme: {
+          extend: {
+            // Add prose for styling the blog post content
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  // -- Set base text color for light mode --
+                  color: theme('colors.gray.700'),
+                  a: {
+                    color: theme('colors.blue.600'),
+                    '&:hover': {
+                      color: theme('colors.blue.800'),
+                    },
+                  },
+                  // -- Fix code blocks for light mode --
+                  code: {
+                    backgroundColor: theme('colors.gray.100'),
+                    color: theme('colors.gray.900'), // <-- Set a dark text color
+                    padding: '0.2em 0.4em',
+                    borderRadius: '0.25rem',
+                    fontWeight: '600',
+                  },
+                  'code::before': { content: '""' }, // Remove quotes
+                  'code::after': { content: '""' },  // Remove quotes
+                  pre: {
+                    backgroundColor: theme('colors.gray.100'),
+                    color: theme('colors.gray.900'), // <-- Set a dark text color
+                  },
+                },
+              },
+              invert: {
+                css: {
+                  // -- Set base text color for dark mode --
+                  color: theme('colors.gray.300'),
+                  a: {
+                    color: theme('colors.blue.400'),
+                    '&:hover': {
+                      color: theme('colors.blue.300'),
+                    },
+                  },
+                  // -- Fix code blocks for dark mode --
+                  code: {
+                    backgroundColor: theme('colors.gray.800'),
+                    color: theme('colors.gray.100'),
+                  },
+                  pre: {
+                    backgroundColor: theme('colors.gray.800'),
+                    color: theme('colors.gray.100'),
+                  },
+                },
+              },
+            }),
+          },
+        },
+      };
+    </script>
+    
+    <!-- 3. Load React libraries -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- 4. Load Babel to translate JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <!-- This is where our React app will be rendered -->
+    <div id="root"></div>
+
+    <!-- 
+      5. Load our React app script. 
+      IMPORTANT: The type MUST be "text/babel" 
+    -->
+    <script type="text/babel" src="blog.jsx"></script>
+  </body>
+</html>
+
