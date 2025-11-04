@@ -168,21 +168,63 @@ const posts = [
       <p class="mb-4">Take a moment this week to do nothing. Don't fill it. Let it be empty. See what rushes in to fill the space.</p>
     `
   },
-  // Add new posts here, e.g.:
-  // {
-  //   id: 3,
-  //   slug: "new-post-slug",
-  //   title: "My New Post",
-  //   date: "November 3, 2025",
-  //   excerpt: "This is a brand new post.",
-  //   content: `<p>Content goes here.</p>`
-  // },
+  {
+  "id": 3,
+  "slug": "the-divided-researcher-how-we-find-answers",
+  "title": "The Divided Researcher: How We Find Answers",
+  "date": "November 4, 2025",
+  "excerpt": "Are we trading deep understanding for fast answers? This post explores two research scenarios: the linear book and the fragmented screen.",
+  "content": `
+    <p class="mb-4">You have a big, complex question. Maybe you need to understand a historical event, a scientific theory, or even a new medical diagnosis.</p>
+    <p class="mb-4">How do you find the answer?</p>
+    <p class="mb-4">More importantly, how does the <em>way</em> you search for that answer change what you end up knowing?</p>
+    <p class="mb-4">Let's look at two researchers.</p>
+
+    <h3 class="text-xl font-semibold mb-2 mt-6">📚 Scenario 1: The Linear Researcher</h3>
+    <p class="mb-4">Think of a student, maybe 20 years ago.</p>
+    <p class="mb-4">Their question sends them to the university library. They start at a terminal, find a few keywords, and get a list of call numbers. They walk into the stacks, find the right section, and pull three, heavy books off the shelf.</p>
+    <p class="mb-4">They find a quiet desk. They open the first book to the table of contents and find the relevant chapter. And then... they just read.</p>
+    <p class="mb-4">They follow the author's single train of thought, page by page, for an hour. They take notes by hand in a notebook. They must <em>wrestle</em> with the author's logic, agreeing or disagreeing. They are completely immersed in a single, quiet, non-blinking world. It's slow. It's methodical. It requires the "deep work" we talked about.</p>
+    <p class="mb-4">After two hours, they have a deep understanding of one or two perspectives. They have <strong>learned</strong>.</p>
+
+    <h3 class="text-xl font-semibold mb-2 mt-6">📱 Scenario 2: The Fragmented Researcher</h3>
+    <p class="mb-4">Now, imagine a student today with the same question.</p>
+    <p class="mb-4">They pull out their laptop. They open a browser and type their question into a search engine.</p>
+    <p class="mb-4">In 0.4 seconds, they have a million results.</p>
+    <p class="mb-4">The top results are a 3-minute video summary, an AI-generated answer, a "quick facts" box, and a forum discussion. They open eight tabs. They skim a paragraph from the first, copy a sentence from the second, and watch the video on 2x speed while checking a notification on their phone.</p>
+    <p class="mb-4">They are "researching" in a storm of hyperlinks, pop-up ads, and related videos. Their focus is shattered, split between a dozen sources at once. It's the "Age of Overwhelm" from our first post, applied to learning.</p>
+    <p class="mb-4">After 20 minutes, they have a "patchwork" of facts, snippets, and quotes. They've <em>found</em> answers, but have they <strong>understood</strong> them?</p>
+
+    <hr class="my-6 border-gray-200 dark:border-gray-700">
+
+    <h3 class="text-xl font-semibold mb-2 mt-6">What Changed?</h3>
+    <p class="mb-4">This isn't just about "analog vs. digital." It's about "focus vs. fragments."</p>
+    <p class="mb-4">The student in <strong>Scenario 1</strong> was forced to do "one thing at a time." The book had no hyperlinks, no notifications. The only way to get the reward (the answer) was to do the deep, linear work. It was a perfect environment for focus.</p>
+    <p class="mb-4">The student in <strong>Scenario 2</strong> is in an environment designed to <em>break</em> focus. The "reward" (a dopamine hit from a new link, a new video) comes every few seconds. This trains the brain to prefer <em>skimming</em> over <em>reading</em>, <em>finding</em> over <em>thinking</em>. It's the exact opposite of the "boring" space our brain needs to actually connect ideas (our "superpower" from the last post).</p>
+    <p class="mb-4">We are training ourselves to be fantastic fact-finders but poor problem-solvers. We're gaining breadth at the total expense of depth.</p>
+
+    <hr class="my-6 border-gray-200 dark:border-gray-700">
+
+    <h3 class="text-xl font-semibold mb-2 mt-6">Reclaiming the "How" of Learning</h3>
+    <p class="mb-4">We can't—and shouldn't—go back. The access and speed of Scenario 2 is a miracle. But we've lost the "how" of Scenario 1, and we desperately need to get it back.</p>
+    <p class="mb-4">The answer is to blend them. We need to build a new system, like the "Atomic Habits" we mentioned.</p>
+    
+    <h4 class="text-lg font-semibold mb-2 mt-4">1. Use the Screen for "Discovery."</h4>
+    <p class="mb-4">Use the power of Scenario 2 to <em>find</em> your sources. Gather the links, download the PDFs, find the names of the best books. This is the "hunter-gatherer" phase.</p>
+    
+    <h4 class="text-lg font-semibold mb-2 mt-4">2. Use the Page for "Understanding."</h4>
+    <p class="mb-4">This is the hard part. You must <em>create</em> Scenario 1 for yourself. Pick the single best article you found. Put it in full-screen mode. Turn off your notifications. Put your phone in another room. Set a timer for 30 minutes.</p>
+    <p class="mb-4">And just. Read.</p>
+    <p class="mb-4">Do "one thing at a time." Allow yourself to get "bored" with a single text until it clicks.</p>
+    <p class="mb-4">We are all researchers now. The question is, which one will you choose to be today? The one who skims, or the one who understands?</p>
+  `
+},
+  
 ];
 
 // --- HOOKS ---
 function useTheme() {
-  // We MUST use React.useState, React.useLayoutEffect, and React.useEffect
-  // to reference the global React object loaded from index.html.
+
   const [theme, setTheme] = React.useState('light');
 
   React.useLayoutEffect(() => {
